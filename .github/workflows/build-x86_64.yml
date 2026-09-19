@@ -1,0 +1,14 @@
+name: build-x86_64
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: ./.github/workflows/build.yml
+    with:
+      frida_version: "17.16.4"
+      custom_name: "sysrender"
+      arch: "android-x86_64"
+      extended: true
+      strict_wx: true
